@@ -1,0 +1,321 @@
+/* Header Styles - Lenovo Design */
+
+/* Logo vermelho da Lenovo */
+.lenovo-logo-red {
+    background: #e60012;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.lenovo-logo-red span {
+    color: white;
+    text-decoration: none;
+}
+
+/* Header principal */
+.lenovo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Barra de pesquisa cinza clara */
+.lenovo-search {
+    display: flex;
+    width: 40%;
+    max-width: 500px;
+    margin: 0 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+}
+
+.lenovo-search input {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: #333;
+}
+
+.lenovo-search input::placeholder {
+    color: #666;
+}
+
+.lenovo-search button {
+    padding: 0 16px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.lenovo-search button:hover {
+    background: #555;
+}
+
+/* Ícones do header */
+.lenovo-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lenovo-account,
+.lenovo-wishlist,
+.lenovo-cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    color: #333;
+    font-size: 14px;
+}
+
+.lenovo-account:hover,
+.lenovo-wishlist:hover,
+.lenovo-cart:hover {
+    background-color: #f5f5f5;
+}
+
+.lenovo-account svg,
+.lenovo-wishlist svg,
+.lenovo-cart svg {
+    font-size: 16px;
+}
+
+/* Navegação principal */
+.lenovo-nav {
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 32px;
+}
+
+.lenovo-nav-main,
+.lenovo-nav-secondary {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.lenovo-nav-main {
+    flex: 1;
+    gap: 30px;
+}
+
+.lenovo-nav-secondary {
+    gap: 20px;
+}
+
+.lenovo-nav-main li,
+.lenovo-nav-secondary li {
+    position: relative;
+}
+
+.lenovo-nav-main li a,
+.lenovo-nav-secondary li a {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.lenovo-nav-main li a:hover,
+.lenovo-nav-secondary li a:hover {
+    color: #e60012;
+}
+
+/* Promoções destacado em vermelho */
+.nav-promocoes {
+    color: #e60012 !important;
+    font-weight: 600 !important;
+}
+
+/* Separadores verticais */
+.lenovo-nav-secondary li:not(:last-child)::after {
+    content: "|";
+    margin-left: 20px;
+    color: #ccc;
+    font-weight: 300;
+}
+
+/* Mobile menu toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.mobile-menu-toggle:hover {
+    background-color: #f5f5f5;
+}
+
+/* Search focus effect */
+.lenovo-search.focused {
+    border-color: #e60012;
+    box-shadow: 0 0 0 2px rgba(230, 0, 18, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .lenovo-header {
+        padding: 12px 24px;
+    }
+    
+    .lenovo-search {
+        margin: 0 16px;
+        width: 35%;
+    }
+    
+    .desktop-text {
+        display: none;
+    }
+    
+    .lenovo-nav {
+        padding: 0 24px;
+    }
+    
+    .lenovo-nav-main {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .lenovo-header {
+        padding: 10px 20px;
+    }
+    
+    .lenovo-search {
+        order: 3;
+        width: 100%;
+        margin: 10px 0 0 0;
+        max-width: none;
+    }
+    
+    .lenovo-icons {
+        gap: 10px;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .lenovo-nav {
+        display: none;
+    }
+    
+    .lenovo-nav.mobile-open {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1001;
+        border-top: 1px solid #e0e0e0;
+    }
+    
+    .lenovo-nav-main,
+    .lenovo-nav-secondary {
+        flex-direction: column;
+        padding: 20px;
+        gap: 0;
+    }
+    
+    .lenovo-nav-main li,
+    .lenovo-nav-secondary li {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .lenovo-nav-main li a,
+    .lenovo-nav-secondary li a {
+        padding: 12px 0;
+        display: block;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .lenovo-nav-secondary li:not(:last-child)::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .lenovo-header {
+        padding: 8px 15px;
+    }
+    
+    .lenovo-logo-red {
+        padding: 6px 12px;
+        font-size: 16px;
+    }
+    
+    .lenovo-search input {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .lenovo-icons {
+        gap: 8px;
+    }
+    
+    .lenovo-account,
+    .lenovo-wishlist,
+    .lenovo-cart {
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lenovo-header {
+        padding: 6px 12px;
+    }
+    
+    .lenovo-logo-red {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    
+    .lenovo-search {
+        margin: 6px 0 0 0;
+    }
+    
+    .lenovo-search input {
+        padding: 10px 12px;
+    }
+    
+    .lenovo-search button {
+        padding: 0 12px;
+    }
+}
