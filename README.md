@@ -130,7 +130,7 @@ O banner foi otimizado para:
 
 ## 📄 Licença
 
-Este projeto é apenas para fins educacionais e de demonstração.
+Este projeto é apenas para fins educacionais e de demonstração e aplicações.
 
 ---
 
